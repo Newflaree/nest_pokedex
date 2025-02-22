@@ -1,4 +1,5 @@
 import {
+  IsNumber,
   IsOptional,
   IsPositive,
   Min
@@ -6,11 +7,13 @@ import {
 
 export class PaginationDto {
   @IsOptional()
+  @IsNumber()
   @IsPositive()
   @Min(1)
-  limit: number;
+  limit?: number;
 
   @IsOptional()
+  @IsNumber()
   @IsPositive()
-  offset: number;
+  offset?: number;
 }
