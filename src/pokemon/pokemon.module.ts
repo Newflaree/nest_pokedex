@@ -18,6 +18,7 @@ import {
         schema: PokemonSchema
       }
     ])
-  ]
+  ],
+  exports: [MongooseModule]
 })
 export class PokemonModule {}
