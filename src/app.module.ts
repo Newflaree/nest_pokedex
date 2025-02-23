@@ -7,11 +7,14 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
+import { EnvConfigiguration } from './config/app.config';
 
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      load: [ EnvConfigiguration ]
+    }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname,'..','public'),
     }),
