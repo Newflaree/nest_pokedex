@@ -22,11 +22,6 @@ import { EnvConfigiguration } from './config/app.config';
     PokemonModule,
     CommonModule,
     SeedModule,
-
   ],
 })
-export class AppModule {
-  constructor() {
-    console.log( process.env.MONGODB );
-  }
-}
+export class AppModule {}
